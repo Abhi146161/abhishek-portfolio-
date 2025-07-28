@@ -1,0 +1,38 @@
+<svg id="MyHOF_Requests_V2" data-name="MyHOF Requests V2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63.998" height="40.001" viewBox="0 0 63.998 40.001">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Union_72" data-name="Union 72" d="M-1049.77-852.413l-5.171-5.171a2,2,0,0,1-.435-2.18,2,2,0,0,1,1.849-1.235h3.172v-13h-16.825a2,2,0,0,1-2-2,2,2,0,0,1,2-2H-1049a2.026,2.026,0,0,1,.327.027,2.011,2.011,0,0,1,.321-.026,2,2,0,0,1,2,2v15h3.172a2,2,0,0,1,1.849,1.235,2,2,0,0,1-.435,2.18l-5.171,5.171a1.994,1.994,0,0,1-1.414.586,2,2,0,0,1-1.419-.587Z" transform="translate(1705.176 1483.828)" fill="#D12A2F"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#19b0dc"/>
+      <stop offset="1" stop-color="#020b50"/>
+    </linearGradient>
+    <clipPath id="clip-path-2">
+      <path id="Union_75" data-name="Union 75" d="M19.411,25.587,14.24,20.416A2,2,0,0,1,15.654,17h3.172V4H2A2,2,0,1,1,2,0H20.176A2.012,2.012,0,0,1,20.5.027,2,2,0,0,1,22.825,2V17H26a2,2,0,0,1,1.415,3.415l-5.172,5.171a2,2,0,0,1-2.828,0Z" transform="translate(28 26.173) rotate(180)" fill="#D12A2F"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-2" y1="1" y2="0" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="0.72" y1="0.3" x2="-0.063" y2="1.199" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2072A0"/>
+      <stop offset="1" stop-color="#19b0dc"/>
+    </linearGradient>
+  </defs>
+  <circle id="Ellipse_167" data-name="Ellipse 167" cx="15" cy="15" r="15" transform="translate(0.002)" fill="#dbd9d9"/>
+  <g id="Mask_Group_12" data-name="Mask Group 12" transform="translate(-599.998 -605.828)" clip-path="url(#clip-path)">
+    <rect id="Rectangle_3223" data-name="Rectangle 3223" width="57" height="31" transform="translate(608.175 602.827)" fill="url(#linear-gradient)"/>
+  </g>
+  <g id="Mask_Group_13" data-name="Mask Group 13" transform="translate(0.002 13.828)" clip-path="url(#clip-path-2)">
+    <rect id="Rectangle_3226" data-name="Rectangle 3226" width="57" height="31" transform="translate(-1.175 -1.827)" fill="url(#linear-gradient-2)"/>
+  </g>
+  <path id="Icon_metro-home" data-name="Icon metro-home" d="M26.29,15.82,14.43,6.615,2.571,15.821V12.067L14.43,2.861l11.86,9.206Zm-2.965-.335v8.895H17.4v-5.93h-5.93v5.93H5.536V15.486L14.43,8.815Z" transform="translate(11.707 -2.861)" fill="url(#linear-gradient-3)"/>
+  <g id="Group_8122" data-name="Group 8122" transform="translate(-582.998 -1332.389)">
+    <rect id="Rectangle_3652" data-name="Rectangle 3652" width="15" height="15" rx="7.5" transform="translate(626 1357.39)" fill="#19b0dc"/>
+    <g id="Group_7944" data-name="Group 7944" transform="translate(3.535 0.925)">
+      <line id="Line_855" data-name="Line 855" x2="8.485" transform="translate(626.964 1360.964) rotate(45)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_856" data-name="Line 856" x2="8.485" transform="translate(632.964 1360.964) rotate(135)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    </g>
+  </g>
+  <g id="Group_8123" data-name="Group 8123" transform="translate(-635.262 -1332)">
+    <rect id="Rectangle_3651" data-name="Rectangle 3651" width="15" height="15" rx="7.5" transform="translate(662 1357)" fill="#19b0dc"/>
+    <path id="Path_1914" data-name="Path 1914" d="M4706.6-3162.275l1.85,2.94,5.217-2.94" transform="matrix(0.966, -0.259, 0.259, 0.966, -3061.896, 5636.673)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>
