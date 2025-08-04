@@ -22,12 +22,12 @@ const skills = [
   { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
   { name: 'React', icon: <FaReact className="text-cyan-400" /> },
   { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-sky-400" /> },
-  { name: 'Node.js', icon: <FaNodeJs className="text-green-600" /> },
-  { name: 'Express.js', icon: <SiExpress className="text-gray-800 dark:text-gray-200" /> },
-  { name: 'MongoDB', icon: <SiMongodb className="text-green-500" /> },
-  { name: 'MySQL', icon: <SiMysql className="text-blue-600" /> },
+  // { name: 'Node.js', icon: <FaNodeJs className="text-green-600" /> },
+  // { name: 'Express.js', icon: <SiExpress className="text-gray-800 dark:text-gray-200" /> },
+  // { name: 'MongoDB', icon: <SiMongodb className="text-green-500" /> },
+  // { name: 'MySQL', icon: <SiMysql className="text-blue-600" /> },
   { name: 'Firebase', icon: <SiFirebase className="text-yellow-500" /> },
-  { name: 'GitHub', icon: <FaGithub className="text-gray-800 dark:text-white" /> },
+  // { name: 'GitHub', icon: <FaGithub className="text-gray-800 dark:text-white" /> },
 ];
 
 const containerVariants = {
