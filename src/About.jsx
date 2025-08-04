@@ -1,16 +1,45 @@
+import { motion } from "framer-motion";
+
 function About() {
   return (
-    <section className="py-12 px-6 bg-gray-100 text-center" id="about">
-      <img
+    <motion.section
+      className="py-12 px-6 bg-gray-100 text-center"
+      id="about"
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      <motion.img
         src="/Abhishek.img"
         alt="Abhishek Saini"
-        className="w-32 h-32 mx-auto rounded-full shadow-md mb-4 object-cover"
+        className="w-32 h-32 mx-auto rounded-full shadow-xl mb-4 object-cover border-4 border-blue-500"
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       />
-      <h2 className="text-3xl font-bold text-blue-700 mb-4">About Me</h2>
-      <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed"> I’m Abhishek Saini, a passionate frontend developer skilled in HTML, CSS,
+
+      <motion.h2
+        className="text-3xl font-bold text-blue-700 mb-4"
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+      >
+        About Me
+      </motion.h2>
+
+      <motion.p
+        className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.7 }}
+      >
+        I’m Abhishek Saini, a passionate frontend developer skilled in HTML, CSS,
         JavaScript and React. I love building user-friendly web interfaces and learning
-        new technologies every day.</p>
-    </section>
+        new technologies every day.
+      </motion.p>
+    </motion.section>
   );
 }
+
 export default About;
