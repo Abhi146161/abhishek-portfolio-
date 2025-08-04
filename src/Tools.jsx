@@ -14,14 +14,14 @@ function Tools() {
   return (
     <motion.section
       id="tools"
-      className="bg-white py-12 px-6 text-center"
+      className="bg-white dark:bg-gray-900 py-12 px-6 text-center"
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <motion.h2
-        className="text-3xl font-bold text-blue-700 mb-10"
+        className="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-10"
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
@@ -33,7 +33,7 @@ function Tools() {
         {tools.map((tool, i) => (
           <motion.div
             key={i}
-            className="bg-gray-50 shadow p-4 rounded-lg flex flex-col items-center hover:shadow-xl transition-all cursor-pointer"
+            className="bg-gray-50 dark:bg-gray-800 shadow p-4 rounded-lg flex flex-col items-center hover:shadow-xl transition-all cursor-pointer"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -47,7 +47,7 @@ function Tools() {
                 tool.icon
               )}
             </div>
-            <p className="text-gray-700 font-medium">{tool.name}</p>
+            <p className="text-gray-700 dark:text-gray-200 font-medium">{tool.name}</p>
           </motion.div>
         ))}
       </div>
