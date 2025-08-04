@@ -2,7 +2,7 @@ import "./index.css";
 import Header from "./Header";
 import About from "./About";
 import Projects from "./Projects";
-import Skills from "./Skills"; // Ensure filename is capital "S"
+import Skills from "./skills";
 import Tools from "./Tools";
 import Contact from "./Contact";
 
