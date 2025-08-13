@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FaChevronDown } from "react-icons/fa";
 
 const Header = () => {
   return (
     <motion.header
-      className="bg-[#0d1117] text-white min-h-screen flex flex-col justify-center items-center text-center px-6"
+      className="bg-[#0d1117] text-white min-h-screen flex flex-col justify-center items-center text-center px-6 relative"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -76,6 +77,18 @@ const Header = () => {
           LinkedIn
         </motion.a>
       </motion.div>
+
+      {/* Scroll Hint */}
+      <motion.a
+        href="#skills"
+        className="absolute bottom-8 flex flex-col items-center text-gray-400 hover:text-white text-sm sm:text-base"
+        initial={{ y: 0 }}
+        animate={{ y: [0, 10, 0] }}
+        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+      >
+        <FaChevronDown className="text-2xl mb-1" />
+        <span className="uppercase tracking-wider">Scroll for other details</span>
+      </motion.a>
     </motion.header>
   );
 };
