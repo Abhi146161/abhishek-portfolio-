@@ -1,95 +1,83 @@
+import React from "react";
 import { motion } from "framer-motion";
-import { Menu } from "lucide-react";
-import { useState } from "react";
 
-function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
-    { name: "Contact", href: "#contact" },
-    {
-      name: "GitHub",
-      href: "https://github.com/YourGitHubUsername",
-      external: true,
-    },
-    {
-      name: "LinkedIn",
-      href: "https://linkedin.com/in/YourLinkedInUsername",
-      external: true,
-    },
-  ];
-
+const Header = () => {
   return (
     <motion.header
-      className="bg-blue-700 text-white sticky top-0 z-50 shadow-lg"
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6 }}
+      className="bg-[#0d1117] text-white min-h-screen flex flex-col justify-center items-center text-center px-6"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        {/* Branding */}
-        <motion.div
-          className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          Abhishek Saini
-        </motion.div>
+      <motion.h1
+        className="text-5xl sm:text-6xl font-extrabold mb-6"
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        Hi, I'm Abhishek
+      </motion.h1>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-4 lg:space-x-6 text-sm sm:text-base">
-          {navLinks.map((link, i) => (
-            <motion.a
-              key={i}
-              href={link.href}
-              target={link.external ? "_blank" : "_self"}
-              rel={link.external ? "noopener noreferrer" : ""}
-              className="hover:text-blue-200 transition-colors"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {link.name}
-            </motion.a>
-          ))}
-        </nav>
+      <motion.p
+        className="text-gray-300 text-lg sm:text-xl mb-8 max-w-3xl"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+      >
+        I am a passionate Frontend Developer | React & Tailwind CSS | Building interactive, smooth & modern web experiences.
+      </motion.p>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden focus:outline-none"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+      <motion.div
+        className="flex flex-wrap justify-center gap-6"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+      >
+        <motion.a
+          href="#projects"
+          className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition-all shadow-md hover:shadow-xl"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
-          <Menu className="w-6 h-6" />
-        </button>
-      </div>
+          View Projects
+        </motion.a>
+        <motion.a
+          href="#contact"
+          className="border border-blue-400 text-blue-400 px-6 py-3 rounded hover:bg-blue-500 hover:text-white transition-all shadow-md hover:shadow-xl"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Contact Me
+        </motion.a>
+      </motion.div>
 
-      {/* Mobile Nav */}
-      {isMenuOpen && (
-        <motion.div
-          className="md:hidden bg-blue-800 px-4 pb-4 pt-2 space-y-2"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
+      <motion.div
+        className="flex gap-6 mt-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+      >
+        <motion.a
+          href="https://github.com/Abhi146161"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-white transition-colors text-2xl"
+          whileHover={{ scale: 1.2 }}
         >
-          {navLinks.map((link, i) => (
-            <a
-              key={i}
-              href={link.href}
-              target={link.external ? "_blank" : "_self"}
-              rel={link.external ? "noopener noreferrer" : ""}
-              className="block text-sm sm:text-base text-white hover:text-blue-200 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
-        </motion.div>
-      )}
+          GitHub
+        </motion.a>
+        <motion.a
+          href="https://linkedin.com/in/abhishek-saini-6a554a25b"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-blue-400 transition-colors text-2xl"
+          whileHover={{ scale: 1.2 }}
+        >
+          LinkedIn
+        </motion.a>
+      </motion.div>
     </motion.header>
   );
-}
+};
 
 export default Header;

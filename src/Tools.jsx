@@ -1,27 +1,38 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaGitAlt } from "react-icons/fa";
 
-function Tools() {
-  const tools = [
-    { name: "VS Code", icon: "🧑‍💻" },
-    { name: "MS Word", icon: "📄" },
-    { name: "MS Excel", icon: "📊" },
-    { name: "Chrome DevTools", icon: "🧪" },
-    { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
-    { name: "GitHub", icon: <FaGithub className="text-black" /> },
-  ];
+const tools = [
+  { name: "VS Code", icon: "🧑‍💻" },
+  { name: "MS Word", icon: "📄" },
+  { name: "MS Excel", icon: "📊" },
+  { name: "Chrome DevTools", icon: "🧪" },
+  { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
+  { name: "GitHub", icon: <FaGithub className="text-white" /> },
+];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, type: "spring", stiffness: 120 } },
+};
+
+const Tools = () => {
   return (
     <motion.section
       id="tools"
-      className="bg-white dark:bg-gray-900 py-12 px-6 text-center"
-      initial={{ opacity: 0, y: 80 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="bg-[#0d1117] text-center py-16 px-6"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={containerVariants}
     >
       <motion.h2
-        className="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-10"
+        className="text-4xl font-bold text-white mb-12"
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
@@ -29,30 +40,33 @@ function Tools() {
         Tools I Use
       </motion.h2>
 
-      <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 max-w-5xl mx-auto">
+      <div className="grid gap-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 max-w-6xl mx-auto">
         {tools.map((tool, i) => (
           <motion.div
             key={i}
-            className="bg-gray-50 dark:bg-gray-800 shadow p-4 rounded-lg flex flex-col items-center hover:shadow-xl transition-all cursor-pointer"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: i * 0.15 }}
-            whileHover={{ scale: 1.1 }}
+            className="relative flex flex-col items-center group bg-[#161b22] border border-gray-700 p-6 rounded-xl shadow-sm cursor-pointer"
+            variants={itemVariants}
+            whileHover={{ scale: 1.08 }}
           >
-            <div className="text-4xl mb-2">
-              {typeof tool.icon === "string" ? (
-                <span>{tool.icon}</span>
-              ) : (
-                tool.icon
-              )}
-            </div>
-            <p className="text-gray-700 dark:text-gray-200 font-medium">{tool.name}</p>
+            <motion.div
+              className="text-5xl mb-3"
+              whileHover={{ scale: 1.3 }}
+              transition={{ type: "spring", stiffness: 150 }}
+            >
+              {typeof tool.icon === "string" ? tool.icon : tool.icon}
+            </motion.div>
+            <motion.p
+              className="text-gray-200 font-medium"
+              whileHover={{ scale: 1.15 }}
+              transition={{ type: "spring", stiffness: 150 }}
+            >
+              {tool.name}
+            </motion.p>
           </motion.div>
         ))}
       </div>
     </motion.section>
   );
-}
+};
 
 export default Tools;
