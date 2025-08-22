@@ -1,10 +1,10 @@
-import "./index.css";
-import Header from "./Header";
-import About from "./About";
-import Projects from "./Projects";
-import Skills from "./skills";
-import Tools from "./Tools";
-import Contact from "./Contact";
+import "../src/styles/index.css";
+import Header from "./components/Header";
+import About from "./sections/About";
+import Projects from "./sections/Projects";
+import Skills from "./sections/skills";
+import Tools from "./sections/Tools";
+import Contact from "./sections/Contact";
 
 function App() {
   return (
