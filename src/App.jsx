@@ -5,6 +5,7 @@ import Projects from "./sections/Projects";
 import Skills from "./sections/skills";
 import Tools from "./sections/Tools";
 import Contact from "./sections/Contact";
+import Education from "./sections/Education";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <main className="space-y-16 sm:space-y-20 md:space-y-24 lg:space-y-28">
         <About />
         <Projects />
+        <Education />
         <Skills />
         <Tools />
         <Contact />
